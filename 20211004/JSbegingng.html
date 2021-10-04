@@ -2,10 +2,27 @@
 <html>
 <body>
 
+    <script>
+    function myFunction() {  
+        testString = "abc";
+        number = 11,0;
+        console.log(typeof testString);
+        console.log(typeof number);
+    if (typeof testString.replaceAll === "function") {
+        console.log(typeof testString.replaceAll);
+        console.log("replaceAll exist");
+    }
+    else {
+         console.log("replaceAll does not exist");
+    }
+}
+    </script>
+
 <h2>My First JavaScript</h2>
 
 <button type="button"
-onclick="document.getElementById('demo').innerHTML = dateToMyFormat;
+onclick="myFunction();
+         document.getElementById('demo').innerHTML = dateToMyFormat;
          document.getElementById('demo2').innerHTML = dateToCustom.replace('klo', '');
          document.getElementById('demo3').innerHTML = dateToCustom.replace('klo', '').slice(0, -3);">
 Click me to display Date and Time.</button>
@@ -24,7 +41,6 @@ Click me to display Date and Time.</button>
 
 <script>
     const dateToCustomNoSec = new Date().toLocaleString('fi-FI', { timeZone: 'Europe/Riga' });
-    const dateToCustom = new Date().toLocaleString('fi-FI', { timeZone: 'UTC' });
     </script>
 
 
