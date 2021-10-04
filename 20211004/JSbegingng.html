@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = dateToMyFormat;
+         document.getElementById('demo2').innerHTML = dateToCustom.replace('klo', '');
+         document.getElementById('demo3').innerHTML = dateToCustom.replace('klo', '').slice(0, -3);">
+Click me to display Date and Time.</button>
+
+<script>
+    const date = new Date(2018, 11, 24, 10, 33, 30);
+    </script>
+
+<script>
+    const dateToISO = new Date().toISOString();
+    </script>
+
+<script>
+    const dateToCustom = new Date().toLocaleString('fi-FI', { timeZone: 'Europe/Riga' });
+    </script>
+
+<script>
+    const dateToCustomNoSec = new Date().toLocaleString('fi-FI', { timeZone: 'Europe/Riga' });
+    </script>
+
+
+    <script>
+        const myDate = new Date();
+        const dateToMyFormat = myDate.getDate() + '.' + (myDate.getMonth() + 1) + '.' 
+        + myDate.getFullYear() + ' ' + myDate.getHours() + ':' + myDate.getUTCMinutes();
+    </script>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+</body>
+</html> 
