@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Variables</h2>
+
+<p>Normal variables</p>
+<p id="demo"></p>
+
+<p>The dollar sign is treated as a letter in JavaScript names.</p>
+<p id="demo2"></p>
+
+<p>The underscore is treated as a letter in JavaScript names.</p>
+<p id="demo3"></p>
+
+<script>
+var x = 5;
+console.log("x data type " + typeof x);
+
+var y = 6;
+console.log("y data type " + typeof y);
+
+var z = x + y;
+console.log("z data type " + typeof z);
+
+var pi = 3.14;
+console.log("pi data type " + typeof pi);
+
+var person = "John Doe";
+console.log("person data type " + typeof person);
+
+var answer = 'Yes I am!';
+console.log("answer data type " + typeof answer);
+
+var name = "John" + " " + "Doe";
+console.log("person data type " + typeof name);
+
+var numbAndString = 2 + 3 + "5";
+console.log("person data type " + typeof numbAndString);
+
+var stringAndNum = "5" + 2 + 3;
+console.log("person data type " + typeof stringAndNum);
+
+var $$$ = "Hello World";
+console.log("person data type " + typeof $$$);
+var $ = 2;
+console.log("person data type " + typeof $);
+var $myMoney = 500000;
+console.log("person data type " + typeof $myMoney);
+
+
+var _lastName = "Johnson";
+console.log("person data type " + typeof _lastName);
+var _x = 2;
+console.log("person data type " + typeof _x);
+var _100 = 5;
+console.log("person data type " + typeof _100);
+
+document.getElementById("demo").innerHTML =
+x + " " + typeof x + "<br>" +
+y + " " + typeof y + "<br>" +
+z + " " + typeof z + "<br>" +
+pi + " " + typeof pi + "<br>" + 
+person + " " + typeof person + "<br>" +
+answer + " " + typeof answer + "<br>" +
+name + " " + typeof name + "<br>" +
+numbAndString + " " + typeof numbAndString + "<br>" +
+stringAndNum + " " + typeof stringAndNum + "<br>";
+
+
+document.getElementById("demo2").innerHTML =
+$$$ + " " + typeof $$$ + "<br>" +
+$ + " " + typeof $ + "<br>" +
+$myMoney + " " + typeof $myMoney + "<br>";
+
+
+document.getElementById("demo3").innerHTML =
+_lastName + " " + typeof _lastName + "<br>" +
+_x + " " + typeof _x + "<br>" +
+_100 + " " + typeof _100 + "<br>";
+
+</script>
+
+</body>
+</html>
