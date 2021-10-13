@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript const</h2>
+
+<p>Declaring a constant array does NOT make the elements unchangeble:</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+// Create an Array:
+const cars = ["Saab", "Volvo", "BMW"];
+console.log("Cars initial Array: " + cars);
+
+// Change an element:
+cars[0] = "Toyota";
+console.log("Changing first parameter: " + cars);
+
+// Add an element:
+cars.push("Audi");
+console.log("Adding another Object: " + cars);
+
+// Display the Array:
+document.getElementById("demo").innerHTML = cars; 
+</script>
+
+<script>
+// Create an object:
+const car = {type:"Fiat", model:"500", color:"white"};
+console.log("Cars initial Array: " + car.color);
+
+// Change a property:
+car.color = "red";
+console.log("Changing car color: " + car.color);
+
+// Add a property:
+console.log("Before adding owner: " + car.owner);
+car.owner = "Johnson";
+console.log("After adding owner adding owner: " + car.owner);
+
+console.log("Testing some parameter: " + car.rei);
+car.rei = "Raimonds";
+console.log("Now it works:" + car.rei);
+
+// Display the property:
+document.getElementById("demo2").innerHTML = "Car owner is " + car.owner; 
+</script>
+
+</body>
+</html>
