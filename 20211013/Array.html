@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Arrays</h2>
+
+    <p id="demo"></p>
+    <p id="lenght"></p>
+    <p id="lastElement"></p>
+    <p id="removeLast"></p>
+    <p id="cutFirstEll"></p>
+    <p id="insertElwhenewheYouWant"></p>
+    <p id="uniteTwoArrays"></p>
+    <p id="unitedArraysSorted"></p>
+    <p id="error"></p>
+
+    <script>
+        try {
+            const cars = ["Saab", "Volvo", "BMW"];
+            document.getElementById("demo").innerHTML = cars;
+            document.getElementById("lenght").innerHTML = cars.length;
+            document.getElementById("lastElement").innerHTML = cars[cars.length - 1];
+            cars.pop();
+            document.getElementById("removeLast").innerHTML = cars;
+            let shiftetValue = cars.shift();
+            document.getElementById("cutFirstEll").innerHTML = shiftetValue;
+            const fruits = ["Apple", "Peach", "Pizza"];
+
+            //splice - cut somewhere, put based on elents that was choosed and rewrite all the other
+            cars.splice(1, 0, "Lemon", "Kiwi", fruits);
+            document.getElementById("insertElwhenewheYouWant").innerHTML = cars;
+
+            //Uniting Arrays
+            const people = ["Person", "Madam", "Sir"];
+            const animals = ["Dog", "Cat", "Rat"];
+            const united = people.concat(animals);
+            document.getElementById("uniteTwoArrays").innerHTML =
+                "before: " + "<br>" +
+                "1st array: " + people + "<br>" +
+                "2nd array: " + animals + "<br>" +
+                "after " + united;
+
+            //Sorting
+            document.getElementById("unitedArraysSorted").innerHTML =
+                "before: " + "<br>" +
+                "1st array: " + people.sort() + "<br>" +
+                "2nd array: " + animals.sort() + "<br>" +
+                "after " + united.sort() + "<br>" +
+                "and reversing not counting sorting " + united.reverse();
+        }
+        catch (errors) {
+            document.getElementById("error").innerHTML = errors;
+        }
+    </script>
+
+</body>
+
+</html>
