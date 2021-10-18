@@ -67,7 +67,9 @@
 
     <script>
         const arrayOne = [40, 100, 1, 5, 25, 10];
-        document.getElementById("highest").innerHTML = myArrayMax(arrayOne);
+        document.getElementById("highest").innerHTML =
+            "<br>" + arrayOne + "<br>" +
+            myArrayMax(arrayOne);
         function myArrayMax(arr) {
             let len = arr.length;
             let max = -Infinity;
@@ -82,7 +84,9 @@
 
     <script>
         const arrayTwo = [40, 100, 1, 5, 25, 10];
-        document.getElementById("lovest").innerHTML = myArrayMin(arrayTwo);
+        document.getElementById("lovest").innerHTML =
+            "<br>" + arrayTwo + "<br>" +
+            myArrayMin(arrayTwo);
         function myArrayMin(arr) {
             let len = arr.length;
             let min = Infinity;
@@ -112,9 +116,9 @@
 
         function displayCars() {
             document.getElementById("sortCars").innerHTML =
-            carsTwo[0].type + " " + carsTwo[0].year + "<br>" +
-            carsTwo[1].type + " " + carsTwo[1].year + "<br>" +
-            carsTwo[2].type + " " + carsTwo[2].year;
+                carsTwo[0].type + " " + carsTwo[0].year + "<br>" +
+                carsTwo[1].type + " " + carsTwo[1].year + "<br>" +
+                carsTwo[2].type + " " + carsTwo[2].year;
         }
     </script>
 
@@ -140,9 +144,9 @@
 
         function displayMyCars() {
             document.getElementById("sortByString").innerHTML =
-            carsThree[0].type + " " + carsThree[0].year + "<br>" +
-            carsThree[1].type + " " + carsThree[1].year + "<br>" +
-            carsThree[2].type + " " + carsThree[2].year;
+                carsThree[0].type + " " + carsThree[0].year + "<br>" +
+                carsThree[1].type + " " + carsThree[1].year + "<br>" +
+                carsThree[2].type + " " + carsThree[2].year;
         }
     </script>
 
