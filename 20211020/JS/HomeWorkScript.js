@@ -1,7 +1,6 @@
 
 const abstractArray = ["Saab", "Volvo", "BMW"];
 const newArray = [];
-var tableOfArrays = "";
 document.getElementById("array").innerHTML = abstractArray;
 
 function addRecordToBegining() {
@@ -19,13 +18,11 @@ function addRecordToEnd() {
 }
 
 function newArrayCreation() {
+    var tableOfArrays = "";
     var convertedToString = abstractArray.toString();
     newArray.push(convertedToString);
-   /* 
-   for (index = 0, len = newArray.length; index < len; index++) {
-        var element = newArray[index];
-        tableOfArrays = tableOfArrays + "\n" + element + "\n";
-    }
-*/
-    return newArray;
+    for (let i = 0; i < newArray.length; i++) {
+        tableOfArrays += newArray[i] + "<br>";
+      }
+    return tableOfArrays;
 }
