@@ -12,5 +12,49 @@ body#mainBody {
     margin: 20px auto;
     border-style: solid;
     border-color: hsla(270, 2%, 24%, 0.781);
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.767);
+}
+
+.programs {
+    padding: 5px 10px;
+    background-color: rgba(128, 128, 128, 0);
+    border: none;
+    outline: none;
+    color: rgba(0,0,0,0.5);
+    font-size: 300%;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.supplementsVitamins {
+    padding: 5px 10px;
+    background-color: rgba(128, 128, 128, 0);
+    border: none;
+    outline: none;
+    color: rgba(49, 38, 47, 0.8);
+    font-size: 300%;
+    font-weight: bold;
+    position: relative;
+    right: -25%;
+    cursor: pointer;
+}
+
+.bodybuilders {
+    padding: 5px 10px;
+    background-color: rgba(128, 128, 128, 0);
+    border: none;
+    outline: none;
+    color: rgba(41, 30, 30, 0.966);
+    font-size: 300%;
+    font-weight: bolder;
+    position: center;
+    font-style: italic;
+    position: relative;
+    right: -50%;
+    cursor: pointer;
+}
+
+p#introText {
+    font-size: 200%;
+    font-weight: lighter;
 }
