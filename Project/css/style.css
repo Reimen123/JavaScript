@@ -20,7 +20,7 @@ body#mainBody {
     background-color: rgba(128, 128, 128, 0);
     border: none;
     outline: none;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
     font-size: 300%;
     font-weight: bolder;
     cursor: pointer;
@@ -54,7 +54,77 @@ body#mainBody {
     cursor: pointer;
 }
 
+.mainPage {
+    padding: 5px 10px;
+    background-color: rgba(128, 128, 128, 0);
+    font-size: 200%;
+    cursor: pointer;
+    position: absolute;
+    right: 900;
+    bottom: 30;
+}
+
 p#introText {
     font-size: 200%;
     font-weight: lighter;
 }
+
+p#sourcelink{
+    font-size: 200%;
+    font-weight: bolder;
+    position: absolute;
+    left: 50;
+    bottom: 30;
+}
+
+table#suppl {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-collapse: collapse;
+    width: 30%;
+    position: absolute;
+    bottom: 220;
+}
+
+table#vit {
+    font-family: 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    width: 30%;
+    position: absolute;
+    right: 700;
+    bottom: 220;
+}
+
+table#food {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+    right: 50;
+    position: absolute;
+    bottom: 220;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+  select#selectBB {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 200%;
+    font-weight: bolder;
+    background-color: rgba(235, 177, 177, 0.712);
+    border: 6px solid #7922CC;
+    border-radius: 25px;
+  }
+
+  button#searchBB {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 200%;
+    font-weight: lighter;
+    background-color: rgba(105, 117, 170, 0.671);
+  }
