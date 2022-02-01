@@ -69,12 +69,16 @@ p#introText {
     font-weight: lighter;
 }
 
-p#sourcelink{
+p#sourcelink {
     font-size: 200%;
     font-weight: bolder;
     position: absolute;
     left: 50;
     bottom: 30;
+}
+
+p#infoAboutBB {
+    font-size: 150%;
 }
 
 table#suppl {
@@ -100,31 +104,31 @@ table#food {
     width: 30%;
     right: 50;
     position: absolute;
-    bottom: 220;
+    bottom: 100;
 }
 
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-  }
-  
-  tr:nth-child(even) {
+}
+
+tr:nth-child(even) {
     background-color: #dddddd;
-  }
-  
-  select#selectBB {
+}
+
+select#selectBB {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 200%;
     font-weight: bolder;
     background-color: rgba(235, 177, 177, 0.712);
     border: 6px solid #7922CC;
     border-radius: 25px;
-  }
+}
 
-  button#searchBB {
+button#searchBB {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 200%;
     font-weight: lighter;
     background-color: rgba(105, 117, 170, 0.671);
-  }
+}

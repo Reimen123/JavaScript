@@ -19,12 +19,12 @@
     <p id="introText">Some infomration about famous bodybuilders, use the search below:</p>
     <form id="formBB">
         <select id="selectBB">
-            <option >Select BB name</option>
+            <option value="" selected disabled hidden>Select BB name</option>
             <script>bodybuildersList()</script>
         </select>
-        <button id="searchBB" onclick="bbInformation()">Search</button>
+        <button type='button' id="searchBB" onclick="bbInformation()">Search</button>
     </form>
-
+    <p id="infoAboutBB"></p>
     <p id="sourcelink"><a target="_blank" href="https://playersbio.com/top-bodybuilders/">Source</p>
 </body>
 

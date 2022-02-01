@@ -1,1 +1,1 @@
-Create TABLE sports;
+SELECT*from actor;
