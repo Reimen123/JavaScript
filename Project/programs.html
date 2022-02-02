@@ -2,7 +2,7 @@
 
 </head id="header">
 <title>Lets have some sports</title>
-<link rel="icon" href="pic/dunbel.ico">
+<link rel="icon" href="pic/dumbbell.ico">
 <div>
     <img id="bg" src="pic/Gym.jpg" alt="">
 </div>
@@ -16,8 +16,19 @@
     <button class="bodybuilders" onclick="openBodybuilders()">Info about</br> famous
         </br> bodybuilders</button>
     <button class="mainPage" onclick="openMainPage()">Main page</button>
-    <p id="introText">This is programs tab.
-    </p>
+    <p id="introText">In this tab You will find some useful tips for working out at home, enjoy.</p>
+    <label>Enter weight:</label>
+    <input type="number" id="weight" min="0" max="300">
+    <label>Enter age:</label>
+    <input type="number" id="age" min="0" max="300">
+    <select id="selectProgram" onchange="createProgram()">
+        <option value="Default" selected disabled hidden>Select program</option>
+        <option value="Gain muscles">Gain muscles</option>
+        <option value="Burning fat">Burning fat</option>
+    </select>
+    <div id="infoMessage"></div>
+    <table id ="tabelOfPrograms">
+    </table>
 
     <script src="JS/mainScript.js"></script>
 </body>

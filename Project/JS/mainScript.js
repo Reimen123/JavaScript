@@ -14,6 +14,139 @@ function openMainPage() {
     window.open('main.html', '_self');
 }
 
+function createProgram() {
+    var weight = document.getElementById('weight').value;
+    var age = document.getElementById('age').value;
+    var selectedProgram = document.getElementById('selectProgram').value;
+    var divElement = document.getElementById('infoMessage');
+    var tableElement = document.getElementById('tabelOfPrograms');
+
+    if (weight == "" || age == "") {
+        alert("Please enter valid age and weight");
+    }
+    else if (selectedProgram === "Gain muscles" && age <= 60 && age >= 40 && weight < 100) {
+        removeChildrens(tableElement);
+        removeChildrens(divElement);
+        creatProgram(arrayOfExcercisesMusculeBegining());
+    }
+
+    else if (selectedProgram === "Gain muscles" && age < 40 && weight < 90) {
+        removeChildrens(tableElement);
+        removeChildrens(divElement);
+        creatProgram(arrayOfExcercisesMusculeAdvanced());
+    }
+
+    else if (selectedProgram === "Burning fat" && age <= 50 && age >= 35 && weight < 150) {
+        removeChildrens(tableElement);
+        removeChildrens(divElement);
+        creatProgram(arrayOfExcercisesFatLossBeginer());
+    }
+    else if (selectedProgram === "Burning fat" && age > 35 && weight < 110) {
+        removeChildrens(tableElement);
+        removeChildrens(divElement);
+        creatProgram(arrayOfExcercisesFatLossAdvanced());
+    }
+    else {
+        removeChildrens(tableElement);
+        cantCreateProgram(divElement);
+    }
+    document.getElementById('selectProgram').selectedIndex = 0;
+}
+
+function creatProgram(activitiesArray) {
+    let table = document.querySelector("table");
+    let data = Object.keys(activitiesArray[0]);
+    generateTableHead(table, data);
+    generateTable(table, activitiesArray);
+}
+
+function cantCreateProgram(divElement) {
+    var paragraph = document.createElement("p");
+    removeChildrens(divElement);
+    var text = document.createTextNode("Sorry dont have such program yet.");
+    paragraph.appendChild(text);
+    divElement.appendChild(paragraph);
+}
+
+function removeChildrens(element) {
+    if (element.children.length != 0) {
+        var child = element.lastElementChild;
+        while (child) {
+            element.removeChild(child);
+            child = element.lastElementChild;
+        }
+    }
+}
+
+function generateTableHead(table, data) {
+    let thead = table.createTHead();
+    let row = thead.insertRow();
+    for (let key of data) {
+        let th = document.createElement("th");
+        let text = document.createTextNode(key);
+        th.appendChild(text);
+        row.appendChild(th);
+    }
+}
+
+function generateTable(table, data) {
+    for (let element of data) {
+        let row = table.insertRow();
+        for (key in element) {
+            let cell = row.insertCell();
+            let text = document.createTextNode(element[key]);
+            cell.appendChild(text);
+        }
+    }
+}
+
+function arrayOfExcercisesMusculeBegining() {
+    return [
+        { Activity: "Wide Press-ups", Duration: "Reps: 10-15 Sets: 3"},
+        { Activity: "Diamond Press-ups", Duration: "Reps: 10-15 Sets: 3"},
+        { Activity: "Incline Press-ups", Duration: "Reps: 10-15 Sets: 3"},
+        { Activity: "Body-up", Duration: "Reps: 10-15 Sets: 3"},
+        { Activity: "Walking Lunge", Duration: "12 each leg Sets: 3"},
+        { Activity: "Squat", Duration: "12 Sets: 3 "}
+    ];
+}
+
+function arrayOfExcercisesMusculeAdvanced() {
+    return [
+        { Activity: "Wide Press-ups", Duration: "Reps: 20-30 Sets: 3"},
+        { Activity: " Spiderman Press-up", Duration: "Reps: 15-20 Sets: 3"},
+        { Activity: "One-arm Press-up", Duration: "Reps: 10-15 Sets: 3"},
+        { Activity: "Handstand Wall Walk", Duration: "8-10 Sets: 3"},
+        { Activity: "Body-up", Duration: "12 Reps: 15-25 Sets: 3"},
+        { Activity: "Squat", Duration: "12 Sets: 3"},
+        { Activity: "Squat-Jump", Duration: "12 Sets: 3"}
+    ];
+}
+
+function arrayOfExcercisesFatLossBeginer() {
+    return [
+        { Activity: "Bodyweight", Duration: "20 reps"},
+        { Activity: "Push-ups", Duration: "10 reps"},
+        { Activity: "Walking lunges", Duration: "10 each leg"},
+        { Activity: "Dumbbell rows", Duration: "10 each arms"},
+        { Activity: "Plank", Duration: "15 seconds"},
+        { Activity: "Jumping Jacks", Duration: "30 reps"}
+    ];
+}
+
+function arrayOfExcercisesFatLossAdvanced() {
+    return [
+        { Activity: "One-legged squats", Duration: "10 each side"},
+        { Activity: "Bodyweight squats", Duration: "20 reps"},
+        { Activity: "Walking lunges", Duration: "20 reps (10 each leg)"},
+        { Activity: "Jump step-ups", Duration: "20 reps (10 each leg)"},
+        { Activity: "Dips (between bar stools)", Duration: " 10 reps"},
+        { Activity: "Chin-up", Duration: "10 reps"},
+        { Activity: "Plank", Duration: "30 seconds"},
+        { Activity: "Push-ups", Duration: "10 reps"}
+    ];
+}
+
 function bodybuildersList() {
     var bodybuilders = document.getElementById('selectBB');
 

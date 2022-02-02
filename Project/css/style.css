@@ -104,7 +104,7 @@ table#food {
     width: 30%;
     right: 50;
     position: absolute;
-    bottom: 100;
+    bottom: 40;
 }
 
 td, th {
@@ -126,9 +126,27 @@ select#selectBB {
     border-radius: 25px;
 }
 
+select#selectProgram {
+    font-size: 120%;
+    border: 9px solid #c4a3e4;
+    background-color: #c4a3e4;
+}
+
 button#searchBB {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 200%;
     font-weight: lighter;
     background-color: rgba(105, 117, 170, 0.671);
+}
+
+input#weight {
+    border-radius: 30px;
+    border: 4px solid #3944da;
+    width: 80px;
+}
+
+input#age {
+    border-radius: 30px;
+    border: 4px solid #da3939;
+    width: 80px;
 }
