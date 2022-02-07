@@ -1,4 +1,4 @@
-package demo.jsg.restapi;
+package src.main.java.demo.jsg.restapi;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
